@@ -47,7 +47,7 @@ pip install -r requirements.txt
 ```
 3. The first step is to traing a SFT model, inside `src` directory, run this command. You can change batch size via `-b`. The bigger VRAM you have the larger batch size you can afford. Optionally, you can open the tensorboard.ipynb to check the training progress.
 ```bash
-python train_sft.py --n experiment_name -b 2`
+python train_sft.py -n experiment_name -b 2`
 ```
 4. Once you finished SFT stage, you can start to train the reward model. You should have a directory started with `sft_` in your `runs` directory. Find the final model weights and run this. This should start a reward model training for 1 epoch and generate a directory started with `rm_` with weights in it.
 ```bash
